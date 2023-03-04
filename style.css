@@ -1,0 +1,1003 @@
+/*================= Générales ===========================*/
+
+*{
+  font-family: 'Raleway', sans-serif;
+}
+
+.fa{
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/* =================== Header ============================*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.logo-Booki
+{
+  padding: 0 16px;
+  width: 120px;
+  height: 50px;
+  margin-left: 15px;
+}
+
+.liens-hébergement-et-activités{
+  display: flex;
+}
+
+.lien{
+  padding: 32px;
+  text-align: center;
+  width: 50%;
+  color: black;
+  text-decoration: none;
+}
+
+.lien:hover{
+    border-top: #0065FC 3px solid;
+    color: #0065FC;
+}
+
+/*téléphones portables */
+@media screen and (max-width: 768px)
+{
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 25px;
+  }
+
+  .logo-Booki
+  {
+    margin: auto;
+    padding: 0;
+  }
+
+  .lien{
+    padding: 32px 32px 16px 32px;
+    text-align: center;
+    width: 50%;
+  }
+
+  .lien:hover{
+    border-top: none;
+    border-bottom: #0065FC 2px solid;
+  }
+}
+
+/*======================= main ============================*/
+
+main{
+  max-width: 1440px;
+  margin: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
+}
+
+/*téléphones portables */
+@media screen and (max-width: 768px)
+{
+  main{
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+}
+
+/*------------------- Menu de recherche  ----------------------*/
+
+.recherche-titre h1{
+  margin-top: 22px;
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.recherche-titre p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/*téléphones portables */
+@media screen and (max-width: 768px)
+{
+  .recherche-titre h1{
+    padding-left: 32px;
+    padding-right: 36px;
+    margin-top: 32px;
+  }
+
+  .recherche-titre p {
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-top: 16px;
+  }
+}
+
+/*Barre de recherche*/
+
+.recherche-barre{
+  display: flex;
+}
+
+.recherche-barre-icone{
+  background-color: #F2F2F2;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 16px 0 0 16px;
+  text-align: center;
+}
+
+.recherche-barre-champ{
+  border-right: none;
+  border-left: none;
+  border-top: #F2F2F2 1px solid;
+  border-bottom: #F2F2F2 1px solid;
+  padding-right: 24px;
+  padding-left: 24px;
+  box-sizing: border-box;
+  width: 224px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.recherche-barre-bouton{
+  background-color: #0065FC;
+  color: white;
+  font-weight: bold;
+  border : none;
+  border-radius: 0 16px 16px 0;
+  padding-right: 24px;
+  padding-left: 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.recherche-barre-loupe{
+  width: 50px;
+  justify-content: center;
+  background-color: #0065FC;
+  color: white;
+  border : none;
+  border-radius: 16px 16px 16px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*portable (largeur < 768px => on cache le bouton)*/
+@media screen and (max-width: 768px)
+{
+  .recherche-barre{
+    padding-left: 32px;
+    margin-top: 32px;
+  }
+
+  .recherche-barre-bouton{
+    display: none;
+  }
+}
+/*tablette (largeur > à 769px => on cache la loupe)*/
+@media screen and (min-width: 769px)
+{
+  .recherche-barre-loupe{
+    display: none;
+  }
+}
+
+/*Filtres */
+
+.recherche-filtres {
+  display: flex;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.économique-familiale{
+  display: flex;
+}
+
+.recherche-filtres-titre{
+  margin: 0 32px 16px 0;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.boite-de-filtre {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 16px;
+  border: 2px solid #d9d9d9;
+  border-radius: 32px;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  font-weight: bold;
+}
+
+.boite-de-filtre:hover{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05); 
+}
+
+.boite-de-filtre-icone {
+  background-color: #DEEBFF;
+  color: #0065FC;
+  border-radius: 100%;
+  min-height: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -2px;
+}
+
+.boite-de-filtre-titre{
+  margin-right: 16px;
+  margin-left: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px)
+{
+  .recherche-filtres{
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Résultats de recherches */
+
+.recherche-resultat{
+  display: flex;
+  align-items: center;
+  margin: 16px 0 32px 0;
+}
+
+.recherche-resultat-icone{
+  height: 32px;
+  width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  border: solid 1px #d9d9d9;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  color: #0065FC;
+}
+
+@media screen and (max-width: 768px)
+{
+  .recherche-resultat{
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* ============== Hébergement à Marseille et plus populaire =======================*/
+
+.hébergement-a-marseille-et-plus-populaire{
+  display: flex;
+  width: 100%; 
+}
+
+/*tablettes */
+@media screen and (max-width: 992px)
+{
+ .hébergement-a-marseille-et-plus-populaire{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end; /*<<<<<<<<<< !!!!!*/
+    width: auto;
+    height: auto;
+  }
+}
+
+/*--------------------- hébergement à Marseille ---------------------*/
+
+.hébergement-a-marseille{
+  width: 67%; 
+  padding: 32px;
+  background-color: #F2F2F2;
+  border-radius: 20px;
+  margin-right: 15px;
+}
+
+.hébergement-a-marseille h2{
+  font-size: 135%;
+}
+
+.hébergement-a-marseille-conteneur-cartes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 80%;
+}
+
+/*tablettes*/
+@media screen and (max-width: 992px)
+{
+  .hébergement-a-marseille{
+    width: auto; 
+    padding: 0;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-right: 0;
+    margin-top: 64px;
+  }
+}
+
+/*téléphone portables*/
+@media screen and (max-width: 768px)
+{
+  .hébergement-a-marseille{
+    display: flex;
+    flex-direction: column;
+    width: auto; 
+    padding: 32px;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .hébergement-a-marseille-conteneur-cartes{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*-------------------- Lien afficher Plus --------------------*/
+
+.hébergement-a-marseille-afficher-plus{
+  margin-top: 12px;
+}
+
+.hébergement-a-marseille-afficher-plus-lien{
+  padding: 0;
+  font-weight: bold;
+  color: black;
+  font-size: 120%;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px)
+{
+  .hébergement-a-marseille-afficher-plus-lien{
+    margin-top: 24px;
+  }
+}
+
+/* ------------------- Les plus populaires ----------------------*/
+
+.les-plus-populaires{
+  width: 33%;
+  padding: 32px;
+  margin-left: 15px;
+  background-color: #F2F2F2;
+  border-radius: 20px;
+}
+
+.les-plus-populaires-titre{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.les-plus-populaires-titre h2{
+  font-size: 135%;
+}
+
+.les-plus-populaires-titre-icone{
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.les-plus-populaires-conteneur-cartes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+
+/*tablettes*/
+@media screen and (max-width: 992px)
+{
+  .les-plus-populaires{
+    width: auto;
+    padding: 0;
+    margin: 0%;
+    background-color: transparent;
+  }
+}
+
+/*téléphones portables*/
+@media screen and (max-width: 768px)
+{
+  .les-plus-populaires{
+    width: auto;
+    height: auto;
+    padding: 32px;
+    margin-left: 0;
+    background-color: #F2F2F2;
+    border-radius: 0;
+  }
+
+  .les-plus-populaires-conteneur-cartes{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/*========================= ACTIVITES à Marseille ========================= */
+
+.activités-à-marseille{
+  margin-top: 64px;
+  margin-bottom: 64px;
+  /*display: block;*/
+}
+
+.activités-à-marseille h2{
+  font-size: 135%;
+}
+
+.activités-à-marseille-tableau{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/*téléphones portables*/
+@media screen and (max-width: 768px)
+{
+  .activités-à-marseille{
+    height: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .activités-à-marseille-tableau{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+  } 
+}
+
+/*---------------------------- Colone 1 -----------------------------*/
+
+.activités-à-marseille-tableau-colonne-type-1{
+  width: 25%;
+  height: auto;
+}
+
+/*tablettes*/
+@media screen and (max-width: 992px)
+{
+  .activités-à-marseille-tableau-colonne-type-1{
+    width: 50%;
+    height: auto;
+  }
+}
+
+/*téléphones portables*/
+@media screen and (max-width: 768px)
+{
+  .activités-à-marseille-tableau-colonne-type-1{
+    width: auto;
+    height: auto;
+  }
+}
+
+/*---------------------------- Colone 2 -----------------------------*/
+
+.activités-à-marseille-tableau-colonne-type-2{
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*tablettes*/
+@media screen and (max-width: 992px)
+{
+  .activités-à-marseille-tableau-colonne-type-2{
+    width: 50%;
+    height: auto;
+    align-items: flex-end;
+  }
+}
+
+/*téléphones portables*/
+@media screen and (max-width: 768px)
+{
+  .activités-à-marseille-tableau-colonne-type-2{
+    width: auto;
+    height: auto;
+    align-items: stretch;
+  }
+}
+
+/*---------------------------- Colone 3 -----------------------------*/
+
+.activités-à-marseille-tableau-colonne-type-3{
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*tablettes*/
+@media screen and (max-width: 992px)
+{
+  .activités-à-marseille-tableau-colonne-type-3{
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+    align-items: flex-start;
+  }
+}
+
+/*téléphones portables*/
+@media screen and (max-width: 768px)
+{
+  .activités-à-marseille-tableau-colonne-type-3{
+    width: auto;
+    height: auto;
+    align-items: stretch;
+    margin-top: 0;
+  }
+}
+
+/*---------------------------- Colone 4 -----------------------------*/
+
+.activités-à-marseille-tableau-colonne-type-4{
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/*tablettes*/
+@media screen and (max-width: 992px)
+{
+  .activités-à-marseille-tableau-colonne-type-4{
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+/*téléphones portables*/
+@media screen and (max-width: 768px)
+{
+  .activités-à-marseille-tableau-colonne-type-4{
+    width: auto;
+    height: auto;
+    align-items: stretch;
+    margin-top: 0;
+  }
+}
+
+/*========================= FOOTER =========================*/
+
+footer{
+  display: flex;
+  background-color: #F2F2F2;
+  max-width: 1440px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.footer-colonne{
+  width: 30%;
+  padding: 32px 32px;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.footer-colonne h3{
+  margin: 0;
+  line-height: 1;
+}
+
+.footer-colonne-liste{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer-colonne-liste-lien{
+  text-decoration: none;
+  color: black;
+}
+
+/*téléphones portables*/
+@media screen and (max-width: 768px)
+{
+  footer{
+    flex-direction: column;
+    padding: 16px 32px;
+  }
+
+  .footer-colonne{
+    width: 100%;
+    padding: 0;
+    margin: 16px 0;
+  }
+
+  .footer-colonne h3{
+    margin: 0;
+  }
+}
+
+/*========================  CARTES ========================= */
+
+/* ---------------------  carte-type-1 --------------------- */
+
+.carte-type-1 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 31%;
+  height: 203px;
+  border-radius: 20px;
+  padding: 6px 6px 6px 6px;
+  background-color: white;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.carte-type-1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+.carte-type-1-lien {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carte-type-1-conteneur-image {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0; 
+}
+
+.carte-type-1-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.carte-type-1 h3 {
+  margin: 8px 12px 0 12px;
+  font-size: 100%;
+  color: black;
+}
+
+.carte-type-1 p {
+  color: black;
+}
+
+.carte-type-1-conteneur-texte p{
+  margin: 4px 12px 4px 12px;
+}
+
+.card-légend{
+  margin: 0 12px 4px 12px;
+}
+
+/*petites résolutions*/
+@media screen and (max-width: 1285px)
+{
+  .carte-type-1-conteneur-texte {
+    font-size: 83%;
+  }
+}
+
+/*télépones portables*/
+@media screen and (max-width: 768px)
+{
+  .carte-type-1 {
+    width: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .carte-type-1-conteneur-texte {
+    font-size: 100%;
+  }
+}
+
+/* ---------------------  carte-type-2 --------------------- */
+
+.carte-type-2{
+  width: auto;
+  height: 150px;
+  background-color: white;
+  padding: 6px 6px 6px 6px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.carte-type-2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+.carte-type-2-lien {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.carte-type-2-conteneur-image {
+  position: relative;
+  width: 40%;
+  margin: 0;
+}
+
+.carte-type-2-image {
+  border-radius: 20px 0 0 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carte-type-2-conteneur-texte{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /*padding-left: 15px;*/
+  box-sizing: border-box;
+}
+
+.carte-type-2-conteneur-texte h3 {
+  margin: 4px 12px 0 12px;
+  color: black;
+}
+
+.carte-type-2-conteneur-texte p{
+  margin: 4px 12px 4px 12px;
+  color: black;
+}
+
+/*petites résolution*/
+@media screen and (max-width: 1285px)
+{
+  .carte-type-2-conteneur-texte{
+    font-size: 90%;
+  }
+}
+
+/*tablettes*/
+@media screen and (max-width: 992px)
+{
+  .carte-type-2{
+    margin-top: 10px;
+  }
+}
+
+/*téléphones portables*/
+@media screen and (max-width: 768px)
+{
+  .carte-type-2{
+    width: auto;
+    height: 150px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}
+
+/* ---------------------  carte-type-3 --------------------- */
+
+.carte-type-3 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 95%;
+  height: 544px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.carte-type-3:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+.carte-type-3-lien {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carte-type-3-conteneur-image {
+  position: relative;
+  width: 100%;
+  height: 89%;
+  margin: 0; 
+}
+
+.carte-type-3-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.carte-type-3-conteneur-texte {
+  margin-left: 24px;
+}
+
+.carte-type-3-conteneur-texte h3 {
+  color: black;
+  font-size: 100%;
+}
+
+/*téléphones portables*/
+@media screen and (max-width: 768px)
+{
+  .carte-type-3 {
+    width: auto;
+    height: 192px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+
+  .carte-type-3-conteneur-image {
+    height: 73%;
+  }
+}
+
+/* ---------------------  carte-type-4 --------------------- */
+
+.carte-type-4 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 95%;
+  height: 288px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.carte-type-4:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+.carte-type-4-lien {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carte-type-4-conteneur-image {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  margin: 0; 
+}
+
+.carte-type-4-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.carte-type-4-conteneur-texte {
+  margin-left: 24px;
+}
+
+.carte-type-4-conteneur-texte h3 {
+  color: black;
+  font-size: 100%;
+}
+
+/*téléphones portables*/
+@media screen and (max-width: 768px)
+{
+  .carte-type-4 {
+    width: auto;
+    height: 192px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+
+  .carte-type-4-conteneur-image {
+    height: 73%;
+  }
+}
+
+/* ---------------------  carte-type-5 --------------------- */
+
+.carte-type-5 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 95%;
+  height: 225px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.carte-type-5:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+.carte-type-5-lien {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carte-type-5-conteneur-image {
+  position: relative;
+  width: 100%;
+  height: 73%; 
+  margin: 0;
+}
+
+.carte-type-5-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.carte-type-5-conteneur-texte {
+  margin-left: 24px;
+}
+
+.carte-type-5-conteneur-texte h3 {
+  color: black;
+  font-size: 100%;
+}
+
+/*téléphones portables*/
+@media screen and (max-width: 768px)
+{
+  .carte-type-5 {
+    width: auto;
+    height: 192px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+
+  .carte-type-5-conteneur-image {
+    height: 73%;
+  }
+}
