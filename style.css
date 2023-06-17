@@ -30,8 +30,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* max-width: 1440px; */
-  /* margin: auto; */
 }
 
 input::placeholder {
@@ -67,8 +65,6 @@ input::placeholder {
 /*======================= main ============================*/
 
 main {
-  /* max-width: 1440px; */
-  /* margin: auto; */
   padding-left: 50px;
   padding-right: 50px;
   box-sizing: border-box;
@@ -106,15 +102,10 @@ main {
 }
 
 .research-bar-field {
-  /* border-right: none; */
-  /* border-left: none; */
-  /* border-top: #F2F2F2 1px solid; */
-  /* border-bottom: #F2F2F2 1px solid; */
   border: none;
   padding-right: 24px;
   padding-left: 24px;
   box-sizing: border-box;
-  /* width: 224px; */
   font-size: 16px;
   font-weight: bold;
 }
@@ -223,7 +214,6 @@ main {
 }
 
 .accommodation-in-marseille {
-  /* width: 871px; */
   width: 900px;
   height: 612px;
   padding: 30px;
@@ -261,7 +251,6 @@ main {
 }
 
 .most-popular {
-  /* width: 420px; */
   width: 395px;
   height: 612px;
   padding: 30px 30px 16px 30px;
@@ -330,8 +319,6 @@ main {
 footer {
   display: flex;
   background-color: #F2F2F2;
-  /* max-width: 1440px; */
-  /* margin: auto; */
   box-sizing: border-box;
 }
 
@@ -402,16 +389,13 @@ footer {
   width: 31%;
   max-width: 250.33px;
   height: 207px;
-  /* padding: 5px; */
   margin-bottom: 30px;
   box-sizing: border-box;
 }
 
 .card-type-2 {
   min-width: 239px;
-  /* max-width: 335px; */
   height: 146px;
-  /* padding: 5px; */
   box-sizing: border-box;
   margin-bottom: 30px;
 }
@@ -444,14 +428,12 @@ footer {
 
 .card-type-1-picture-container {
   width: 100%;
-  /* height: 60%; */
   height: 114px;
   margin: 0;
   padding: 5px;
 }
 
 .card-type-2-picture-container {
-  /* width: 40%; */
   width: 145px;
   margin: 0;
   padding: 5px 0 5px 5px;
@@ -504,35 +486,25 @@ footer {
 }
 
 .card-type-3-text-container {
-  padding-left: 15px;
-  width: inherit;
+  padding: 20px 19px;
+  width: -WEBKIT-FILL-AVAILABLE;  
   position: absolute;
   bottom: 0;
   background-color: white;
 }
 
-.card-title {
-  margin: revert;
-  color: black;
-  font-size: 100%;
+.card-type-3-4-5-title {
+  margin: 0;  
 }
 
 /*======================== MEDIA QUERIES =======================*/
 
 /*petites résolutions*/
 @media screen and (min-width: 993px) and (max-width: 1285px) {
-  /* main {
-    padding-left: 32px;
-    padding-right: 32px;
-  } */
 
   .accommodation-in-marseille {
     margin-right: 0;
   }
-
-  /* .card-legend {
-    font-size: 85%;
-  } */
 
   .card-type-1-text-container {
     padding: 0 5px;
@@ -549,7 +521,7 @@ footer {
   }
 
   .card-type-3-text-container {
-    padding-left: 6px;
+    padding: 16px 19px;
   }
 }
 
@@ -644,7 +616,7 @@ footer {
 
   footer {
     flex-direction: column;
-    padding: 16px 32px;
+    padding: 16px 20px;
   }
 
   .footer-column {
