@@ -51,6 +51,7 @@ input::placeholder {
   padding: 32px;
   text-align: center;
   width: 50%;
+  font-weight: 400;
   color: black;
   text-decoration: none;
   border-top: transparent 3px solid;
@@ -195,16 +196,16 @@ main {
 }
 
 .research-result-icon {
-  height: 32px;
-  width: 32px;
-  min-height: 32px;
-  min-width: 32px;
+  height: 24px;
+  width: 24px;
+  min-height: 24px;
+  min-width: 24px;
   border: solid 1px #d9d9d9;
   border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 16px;
+  margin-right: 10px;
   color: #0065FC;
 }
 
@@ -638,6 +639,7 @@ footer {
     padding: 32px 32px 16px 32px;
     text-align: center;
     width: 50%;
+    border-bottom: #F2F2F2 3px solid;
   }
 
   .lien:hover {
@@ -693,6 +695,13 @@ footer {
     bottom: 0;
   }
 
+  .activities-in-marseille {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+  }
+
   .activities-in-marseille h2 {
     margin-top: 0;
     margin-bottom: 18px;
@@ -716,12 +725,7 @@ footer {
     border-radius: 0;
   }
 
-  .activities-in-marseille {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .activities-in-marseille-table {
+   .activities-in-marseille-table {
     flex-direction: column;
     justify-content: flex-start;
   }
